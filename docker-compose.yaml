@@ -1,0 +1,13 @@
+mongoose-models-boilerplate:
+  build: .
+  stdin_open: true
+  tty: true
+  environment:
+    - NODE_ENV
+  links:
+    - mongo
+
+mongo:
+  stdin_open: true
+  tty: true
+  image: mongo:3.2
