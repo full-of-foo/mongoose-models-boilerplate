@@ -16,14 +16,14 @@ The tooling set up is as follows:
 # build the package (within le container)
 $ docker-compose build && docker-compose run mongoose-models-boilerplate /bin/bash
 
-# install the node package
+# install/link the local package
 $ npm link mongoose-models-boilerplate
 
 # connect to mongo and begin working against documents
 $ node -e "\
   // allow one connect to the given URI, and optionally seed
   var db = require('mongoose-models-boilerplate').db; \
-  // example model
+  // included example model
   var User = require('mongoose-models-boilerplate').User; \
 
   db({dbUri: 'mongo/test:27017', isSeeded: true}, function() { \
